@@ -11,9 +11,9 @@
     T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
 \begin{document}
 
-\title{Exploring Generalization of Seq2seq model for Fog Computing Application Placement Problem \\}
+\title{Exploring Generalization of Seq2seq model for Fog Computing Application Placement Problem \\
 % should not be used
-\thanks{Identify applicable funding agency here. If none, delete this}
+\thanks{Identify applicable funding agency here. If none, delete this}}
 
 \author{\IEEEauthorblockN{1\textsuperscript{st} Given Name Surname}
 \IEEEauthorblockA{\textit{dept. name of organization (of Aff.)} \\
@@ -76,35 +76,102 @@ This research explores the generalization capabilities of deep learning models f
 
 The relevance of this research extends beyond academic interest, having considerable implications for the future resilience of networks. A robust placement algorithm, with strong generalization capabilities, can maintain network performance and service quality despite disruptions and uncertainties. By contributing to the development of such algorithms, this research advances efforts to create more resilient and efficient fog networks, paving the way for a future equipped to handle the ever-evolving challenges of digital connectivity.
 
+In the context of Seq2Seq models, which are widely used for sequence generation tasks, achieving good generalization is essential to ensure their practical applicability and usefulness in real-world scenarios.
+
+\section{Related Research}
+
+The increasing adoption of fog computing has opened up new possibilities for the efficient deployment of applications and services at the network edge, closer to the end-users and data sources. However, fog computing introduces unique challenges in terms of application placement due to the distributed and heterogeneous nature of fog nodes, varying resource capabilities, and dynamic network conditions. To address these challenges, there is a growing need for intelligent and adaptive application placement strategies that can optimize resource utilization, reduce latency, and enhance overall system performance in fog environments.
+
+Traditional approaches to application placement in fog computing often rely on heuristic-based methods or simple rule-based algorithms that do not fully leverage the power of data-driven decision-making. These conventional approaches may struggle to cope with the dynamic and diverse nature of fog environments, leading to suboptimal resource allocation, increased latency, and reduced application performance.
+
+In this context, the Sequence-to-Sequence (Seq2Seq) method, which has proven its effectiveness in sequence generation tasks, offers a promising avenue for addressing the fog application placement problem. By using a Seq2Seq model, we can capture the complex and non-linear relationships between application requirements, network conditions, and fog node capabilities. The model can learn patterns from historical placement data, enabling it to generate optimized placement decisions for new application instances.
+
+However, to be truly effective and practical in fog computing scenarios, a Seq2Seq model needs to exhibit robust generalization capabilities. Generalization is crucial because fog environments are dynamic and inherently diverse, with application instances varying in their resource demands, communication patterns, and requirements. A generalized Seq2Seq model should be able to make accurate placement decisions for unseen application scenarios, including different application types, varying resource constraints, and dynamic network conditions.
+
+Without a generalized Seq2Seq model, the application placement decisions may suffer from overfitting or underfitting. Overfitting may occur when the model memorizes the training data and fails to generalize well to unseen scenarios, resulting in poor performance and inefficient resource usage. Conversely, underfitting may lead to inadequate resource allocation and suboptimal placement decisions.
+
+Therefore, exploring the generalization of Seq2Seq models for the fog application placement problem is of paramount importance. By enhancing the model's ability to handle diverse and dynamic fog environments, we can achieve more efficient, adaptive, and optimized application placement, ultimately leading to improved user experience, reduced latency, and enhanced overall system performance in fog computing scenarios. A generalized Seq2Seq model can be a valuable tool in meeting the challenges posed by the fog application placement problem and advancing the state-of-the-art in fog computing research and applications.
+
+\section{Background}
+
+\subsection{Fog Computing Application Placement Problem}
+
+nanti disini juga sampaikan yang versi deep learning
+
+\subsection{Methods to Generalize in seq2seq}
+
+Generalization in the context of pre-processing for Seq2Seq models refers to the ability to apply a set of data preparation techniques that can be universally effective across different tasks, domains, and datasets. A generalized pre-processing pipeline ensures that the input data is appropriately formatted, transformed, and prepared to facilitate optimal learning by the Seq2Seq model, regardless of the specific task or dataset at hand. The goal is to create a versatile and robust pre-processing approach that can be easily adapted to various sequence generation tasks, thus reducing the need for task-specific data pre-processing strategies.
+
+Here are some generalization methods and principles for pre-processing in Seq2Seq models:
+
+    Tokenization and Vocabulary Construction: A generalized pre-processing step involves tokenizing the input sequences into meaningful units, such as words, subwords, or characters. The vocabulary construction should be based on a diverse and representative corpus to handle a wide range of words and phrases in different languages or domains.
+
+    Padding and Truncation: Sequences in the input data may vary in length, and Seq2Seq models require fixed-length input. A generalized approach should handle variable-length sequences by either padding shorter sequences or truncating longer ones, ensuring uniformity in sequence length.
+
+    Data Cleaning and Normalization: Pre-processing should include data cleaning to remove irrelevant or noisy elements and normalization to standardize the data, such as converting text to lowercase, removing special characters, or normalizing numerical values.
+
+    Handling Out-of-Vocabulary (OOV) Tokens: A robust pre-processing pipeline should handle OOV tokens encountered during inference, especially when dealing with unseen words or phrases. This could involve using subword tokenization or handling unknown tokens with special markers.
+
+    Embedding and Feature Representation: Generalized pre-processing should facilitate the creation of word embeddings or other feature representations that capture semantic meaning and relationships between words effectively. This ensures that the model can extract meaningful information from the input sequences.
+
+    Data Augmentation: Data augmentation, as part of pre-processing, can enhance generalization by artificially increasing the diversity of the training data. Techniques such as paraphrasing, back-translation, or adding noise to the input sequences can be applied in a generic manner.
+
+    Handling Imbalanced Data: If the dataset exhibits class imbalances, a generalized pre-processing approach should include methods to address this issue, such as oversampling, undersampling, or class-weighted loss functions.
+
+    Special Handling for Sequential Data: In some cases, sequential data may require additional pre-processing, such as time series alignment or handling temporal gaps.
+
+    Language and Domain Adaptation: To ensure generalization across different languages or domains, pre-processing techniques should be designed to adapt to linguistic variations and domain-specific characteristics.
+
+    Data Format Compatibility: A generalized pre-processing pipeline should handle various data formats commonly encountered in sequence generation tasks, such as text data, time series data, or audio data.
+
+By incorporating these generalization methods into the pre-processing pipeline, Seq2Seq models can be more versatile and capable of handling diverse data sources, tasks, and domains. This helps reduce the effort required for task-specific data preparation and promotes the transferability of Seq2Seq models across different applications.
 
 
-\section{Ease of Use}
+\section{Methodology}
 
-\subsection{Maintaining the Integrity of the Specifications}
-
-The IEEEtran class file is used to format your paper and style the text. All margins, 
-column widths, line spaces, and text fonts are prescribed; please do not 
-alter them. You may note peculiarities. For example, the head margin
-measures proportionately more than is customary. This measurement 
-and others are deliberate, using specifications that anticipate your paper 
-as one part of the entire proceedings, and not as an independent document. 
-Please do not revise any of the current designations.
-
-\section{Methodlogy}
+\subsection{Seq2seq Model}
 
 minta tolong ini dijelasin metode tokenisasi yang kita pakai. dan proses preprosesing relevan lainnya
 
 jangan kebanyakan di model
 
+\subsection{Experiment Setup}
 
-Before you begin to format your paper, first write and save the content as a 
-separate text file. Complete all content and organizational editing before 
-formatting. Please note sections \ref{AA}--\ref{SCM} below for more information on 
-proofreading, spelling and grammar.
 
-Keep your text and graphic files separate until after the text has been 
-formatted and styled. Do not number text heads---{\LaTeX} will do that 
-for you.
+\section{Results}
+
+Our investigation into the generalization capabilities of deep learning models in the context of fog application placement yielded significant findings. The analysis was based on key parameters - average response time, byte size, and hop count - across various deep learning methods. The objective was to achieve the lowest values for these parameters, as lower values indicate more efficient and effective application placement in the fog network.
+
+The 'multihead50000-16' method demonstrated an impressive performance, achieving lower average response times and byte sizes compared to other methods. This suggests that this method may offer efficient application placement with quicker response times and less data transmission, making it a promising candidate for implementation in real-world fog networks.
+
+The 'naps' method showed a lower average hop count, indicating that it might provide more direct paths for data transmission. The fewer the number of hops, the less the potential for latency, suggesting that the 'naps' method could be effective in scenarios where minimizing latency is critical.
+
+The 'multihead8' and 'multihead16' methods also demonstrated competitive performances. Although they did not achieve the lowest averages, their performance was close to the best-performing methods, showing their potential for effective application placement in fog networks.
+
+The 'multiheadParmhead-8' method was excluded from our analysis due to its significantly lower performance compared to the other methods.
+
+In our investigation into the generalization capabilities of deep learning models for fog application placement, we examined the average number of unique apps per method. This served as a measure of availability, a critical factor in ensuring the reliable and efficient operation of fog networks.
+
+Availability, in this context, pertains to the capability of the placement algorithm to accommodate a diverse range of applications. A higher average number of unique apps indicates that the method can generalize well to various applications, demonstrating its adaptability and robustness in the face of diverse application requirements.
+
+The 'naps' method exhibited the highest average number of unique apps, signifying superior availability. This suggests that the 'naps' method has impressive generalization capabilities, making it a versatile choice for application placement in a variety of fog network scenarios.
+
+The 'multihead16' and 'multihead8' methods also demonstrated high availability, with a significant average number of unique apps. This indicates that these methods can effectively generalize to a wide range of applications, affirming their potential for diverse fog network environments.
+
+On the other hand, the 'multihead50000-16' and 'multihead50000-8' methods showed slightly lower availability. While these methods still achieved respectable averages, their relatively lower scores suggest that their generalization capabilities might be more limited compared to the 'naps', 'multihead16', and 'multihead8' methods.
+
+
+\section{Conclusion and Future Research}
+
+Our research into the generalization capabilities of deep learning models for fog application placement yielded compelling insights. We found that these models could indeed adapt effectively to unseen scenarios, a crucial attribute for dynamic fog computing environments.
+
+Methods such as 'multihead50000-16' and 'naps' distinguished themselves by achieving the lowest averages for key parameters like response time, byte size, and hop count. These lower averages signify efficient performance and robustness, thereby marking these methods as potential contenders for application placement in future fog networks.
+
+Moreover, we identified availability, measured by the average number of unique apps per method, as a critical metric for assessing generalization. High availability indicates a method's adaptability and its ability to handle a diverse range of applications, thereby enhancing its resilience in varied fog network scenarios. In this regard, the 'naps', 'multihead16', and 'multihead8' methods showcased impressive availability, underlining their potential for efficient and versatile application placement.
+
+However, the selection of a method should not solely hinge on these results but should also take into account the specific requirements of the network and the application. Each fog computing environment is unique and demands a tailored approach.
+
+In conclusion, while our research sheds light on the promising generalization capabilities of several deep learning methods, it also emphasizes the need for further research. Refining these methods and enhancing their adaptability and efficiency is a crucial next step for harnessing the full potential of fog computing in the IoT era. These efforts will pave the way for more resilient, efficient, and intelligent fog networks, capable of meeting the challenges of our rapidly evolving digital landscape.
 
 \subsection{Abbreviations and Acronyms}\label{AA}
 Define abbreviations and acronyms the first time they are used in the text, 
