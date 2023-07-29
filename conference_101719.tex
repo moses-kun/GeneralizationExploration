@@ -111,7 +111,9 @@ Therefore, exploring the generalization of Seq2Seq models for the fog applicatio
 
 \subsection{Achieving Generalized Fog Computing Application Placement Seq2seq Model}
 
-Since Seq2Seq models train data in the form of a sequence, there are demerits when performing generalizations towards fog computing problems due to high heterogenity. The model are limited to generate output in a fixed length equal to the input. Input and output size is defined by the dataset length. Hence, if the input length is exceed the dataset defined length, an error would occur. 
+Since Seq2Seq models train data in the form of a sequence, there are demerits when performing generalizations towards fog computing problems due to high heterogenity. The Seq2Seq model are often limited to generate output in a fixed length equal to the input. Input and output size is defined by the dataset length. Hence, if the input length is exceed the dataset defined length, an error would occur. 
+
+The fixed length of the input encoder and decoder inside the Seq2Seq architecture needed to be optimized to achieve generalization. The Attention Mechanism inside the model is able to highlight the important context of the sequence index by transforming the sentence into Attention Weight in the form of the dot product. However, this approach for the fog computing problem will not be satisfied generalization since the dataset is mostly in integer type. Hence, the embedding vectors will differ from other Natural Language Processing tasks, and an error will occurred. 
 
 Moreover, in the fog computing application placement problem, the dataset is mostly integer type instead of string type. This cause a different dot product produce by the model. The embedding output from the data wouldn't be the same as machine translation, or any other natural language task. This raised a concern for the fog problem to achieve generalization.
 
@@ -120,8 +122,6 @@ Therefore, to achieve generalization model has to be able to adapt with n-length
 \subsection{Generalization in Seq2Seq}
 
 Generalization in the context of Seq2Seq models refers to the ability to apply a set of data preparation techniques that can be universally effective across different tasks, domains, and datasets. A generalized pipeline ensures that the input data is appropriately formatted, transformed, and prepared to facilitate optimal learning by the Seq2Seq model, regardless of the specific task or dataset at hand. The goal is to create a versatile and robust pre-processing approach that can be easily adapted to various sequence generation tasks, thus reducing the need for task-specific data pre-processing strategies.
-
-The fixed length of the input encoder and decoder inside the Seq2Seq architecture needed to be optimized to achieve generalization. The Attention Mechanism inside the model is able to highlight the important context of the sequence index by transforming the sentence into Attention Weight in the form of the dot product. However, this approach for the fog computing problem will not be satisfied since the dataset is mostly in integer type. Hence, the embedding vectors will differ from other Natural Language Processing tasks, and an error will occurred. 
 
 Here are some generalization methods and principles for pre-processing in Seq2Seq models:
 
@@ -157,6 +157,8 @@ The Seq2Seq model will train pairs of input and output in the form of a sequence
 To assist the decoder during sequence generation, SOS (Start of Sentence), and EOS (End of Sentence) tokens will be used. SOS will be used for the start of the sequence when the model is needed to produce a sequence, while EOS will be used at the end of the sequence. There's also a PAD token to handle sequence to be equal during the batching phase. The PAD token will fill the sequence if the length of the sequence is not equal. UNK token will be used to handle input outside the known data that have been recognized by the model.
 
 The UNK token is also used to tackle the generalization problem inside the model. Although the whole topology in the form of a sequence was trained, the model needs to understand the unknown input when testing the model. The UNK token represents the redefined index inside the model and replaces it with the token itself. Hence, the unknown sequence input will only be taken for the index that has been known by the model for output generation.
+
+To address fixed length issue general Seq2Seq can be modified to accept more then the dataset length. Issue with Attention Mechanism in Natural Language Processing task still guided by the position of the index token. As the input length increases, some of the data pushed beyond its index order. To address this problem, by differentiating each requeiremnts as follows: RAM in single numerical value, BYTES in thousands, and Source with "n" annotation. This distinc differentiation can guide Attention Mechanism even if the index token is different in dataset especially if the data length is different then the dataset.
 
 % minta tolong ini dijelasin metode tokenisasi yang kita pakai. dan proses preprosesing relevan lainnya
 
