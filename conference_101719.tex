@@ -144,7 +144,13 @@ By incorporating these generalization methods into the pre-processing pipeline, 
 
 \section{Methodology}
 
-\subsection{Seq2seq Model}
+\subsection{Pre-processing}
+
+The Seq2Seq model will train pairs of input and output in form of sequence. Pre-processing method should be done to fit the dataset into the model. The input from dataset will be considered as vocabulary and the whole input and output will be considered as pairs. Since the data consist of numbers, and using only one letter to tag the nodes, pre-processing only done by splitting each input sequence into one dimensional array. 
+
+To assist the decoder during sequence generation, SOS (Start of Sentence), and EOS (End of Sentence) token will be used. SOS will be used for a start of sequence when the model needed to produce a sequene, while EOS will be use at the end of the sequence. There's also PAD token to handle sequence to be equal during batching phase. The PAD token will fill the sequence if the length of the sequence is not equal. UNK token will be used to handle input outside the known data that has been recognized by the model.
+
+
 
 minta tolong ini dijelasin metode tokenisasi yang kita pakai. dan proses preprosesing relevan lainnya
 
