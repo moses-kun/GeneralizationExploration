@@ -1,14 +1,14 @@
 # Fdb version 3
-["bibtex conference_101719"] 1690363198 "conference_101719.aux" "conference_101719.bbl" "conference_101719" 1690615541
+["bibtex conference_101719"] 1690363198 "conference_101719.aux" "conference_101719.bbl" "conference_101719" 1690617569
   "050723.bib" 1690105226 1220049 2d3c9bb2df6638d498d52533e7d05546 ""
   "IEEEtran.bst" 0 -1 0 ""
-  "conference_101719.aux" 1690615541 2733 011219662503f8aaecb116e085b967d1 "pdflatex"
+  "conference_101719.aux" 1690617568 2733 011219662503f8aaecb116e085b967d1 "pdflatex"
   (generated)
-  "conference_101719.blg"
   "conference_101719.bbl"
-["pdflatex"] 1690615540 "/Users/ajiekusumawardhana/Desktop/Papers-fog/GeneralizationExploration/conference_101719.tex" "/Users/ajiekusumawardhana/Desktop/Papers-fog/GeneralizationExploration/conference_101719.pdf" "conference_101719" 1690615541
-  "/Users/ajiekusumawardhana/Desktop/Papers-fog/GeneralizationExploration/conference_101719.aux" 1690615541 2733 011219662503f8aaecb116e085b967d1 ""
-  "/Users/ajiekusumawardhana/Desktop/Papers-fog/GeneralizationExploration/conference_101719.tex" 1690615540 30440 a69261e58a4a89460531b653c04544e7 ""
+  "conference_101719.blg"
+["pdflatex"] 1690617567 "/Users/ajiekusumawardhana/Desktop/Papers-fog/GeneralizationExploration/conference_101719.tex" "/Users/ajiekusumawardhana/Desktop/Papers-fog/GeneralizationExploration/conference_101719.pdf" "conference_101719" 1690617569
+  "/Users/ajiekusumawardhana/Desktop/Papers-fog/GeneralizationExploration/conference_101719.aux" 1690617568 2733 011219662503f8aaecb116e085b967d1 ""
+  "/Users/ajiekusumawardhana/Desktop/Papers-fog/GeneralizationExploration/conference_101719.tex" 1690617567 31100 e685f16b50cac624417a8a0300cdff42 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2021/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/courier/pcrr7t.tfm" 1136768653 960 379cc0019370a9e0208a0a3f949f847a ""
@@ -90,13 +90,13 @@
   "/usr/local/texlive/2021/texmf-var/web2c/pdftex/pdflatex.fmt" 1617439769 2724734 3475a40171f217bd4e28873014032fd9 ""
   "/usr/local/texlive/2021/texmf.cnf" 1616695596 577 4c1911a7228e554c6032256d3cf5567d ""
   "IEEEtran.cls" 1690105226 288304 b67b6fc6c2abb39f9b461923f5199343 ""
-  "conference_101719.aux" 1690615541 2733 011219662503f8aaecb116e085b967d1 "pdflatex"
+  "conference_101719.aux" 1690617568 2733 011219662503f8aaecb116e085b967d1 "pdflatex"
   "conference_101719.bbl" 1690363198 0 d41d8cd98f00b204e9800998ecf8427e "bibtex conference_101719"
-  "conference_101719.tex" 1690615540 30440 a69261e58a4a89460531b653c04544e7 ""
+  "conference_101719.tex" 1690617567 31100 e685f16b50cac624417a8a0300cdff42 ""
   "fig1.png" 1690105226 4535 3b4c70b1b9361fad686e8d234c8fe506 ""
   (generated)
+  "/Users/ajiekusumawardhana/Desktop/Papers-fog/GeneralizationExploration/conference_101719.log"
   "conference_101719.pdf"
+  "conference_101719.log"
   "conference_101719.aux"
   "/Users/ajiekusumawardhana/Desktop/Papers-fog/GeneralizationExploration/conference_101719.pdf"
-  "conference_101719.log"
-  "/Users/ajiekusumawardhana/Desktop/Papers-fog/GeneralizationExploration/conference_101719.log"
