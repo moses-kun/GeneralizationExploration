@@ -111,7 +111,13 @@ Therefore, exploring the generalization of Seq2Seq models for the fog applicatio
 
 \subsection{Fog Computing Application Placement Problem}
 
-nanti disini juga sampaikan yang versi deep learning
+Since Seq2Seq models train data in the form of a sequence, there are also demerits when performing generalizations towards sequential problems. The model task is to generate output in a fixed length equal to the input. Hence, if the input length outside the dataset trained is longer than the defined length, an error would occur. 
+
+The encoder and decoder inside the Seq2Seq architecture always have their fixed length to ensure the output is correctly predicted based on each of every index. Thus, an Attention Mechanism is also needed inside the architecture to calculate the Attention Weight. The Attention Mechanism will consider the sequence output based on every sequence index before understanding the context. However, if the input doesn't recognize by the model, the Attention Mechanism may not be able to handle this problem, and will only produce an error in the prediction.
+
+Moreover, in the fog computing application placement problem, the dataset is not in string type. The embedding output from the data wouldn't be the same as machine translation, or any other natural language task. This raised a concern for the fog problem to achieve generalization.
+
+A solution to train all scenarios wouldn't be the best option. This method will take a very large resource and be time-consuming. Hence, optimizing the input sequence in inference inside the Seq2Seq architecture needs to be done.
 
 \subsection{Methods to Generalize in seq2seq}
 
