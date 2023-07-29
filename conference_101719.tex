@@ -109,21 +109,21 @@ Therefore, exploring the generalization of Seq2Seq models for the fog applicatio
 
 \section{Background}
 
-\subsection{Fog Computing Application Placement Problem}
+\subsection{Achieving Generalized Fog Computing Application Placement Seq2seq Model}
 
 Since Seq2Seq models train data in the form of a sequence, there are demerits when performing generalizations towards fog computing problems due to high heterogenity. The model are limited to generate output in a fixed length equal to the input. Input and output size is defined by the dataset length. Hence, if the input length is exceed the dataset defined length, an error would occur. 
 
 Moreover, in the fog computing application placement problem, the dataset is mostly integer type instead of string type. This cause a different dot product produce by the model. The embedding output from the data wouldn't be the same as machine translation, or any other natural language task. This raised a concern for the fog problem to achieve generalization.
 
-Therefore, to achieve generalization model has to be able to adapt with n-length input as there is no specisific module numbers that application can have. Model also need to adapt with varying numbers that represents requirement.
+Therefore, to achieve generalization model has to be able to adapt with n-length input as there is no specific module numbers that application can have. Model also need to adapt with varying numbers that represents requirement. Since training all possible input wouldn't be the practical, optimizing the input sequence in inference inside the Seq2Seq architecture needs to be done.
 
-A solution to train all scenarios wouldn't be the best option. This method will take a very large resource and be time-consuming. Hence, optimizing the input sequence in inference inside the Seq2Seq architecture needs to be done.
-
-\subsection{Methods to Generalize in seq2seq}
-
-The encoder and decoder inside the Seq2Seq architecture length have to be defined. Since, an Attention Mechanism is also needed inside the architecture to calculate the Attention Weight. The Attention Mechanism will consider the sequence output based on every sequence index before to understand the context. Therefore, the output predicted was based on the embedding size of the input in form of dot product. However, if the input doesn't recognize by the model, the Attention Mechanism may not be able to handle this problem, and will only produce an error in the prediction.
+\subsection{Generalization in Seq2Seq}
 
 Generalization in the context of pre-processing for Seq2Seq models refers to the ability to apply a set of data preparation techniques that can be universally effective across different tasks, domains, and datasets. A generalized pre-processing pipeline ensures that the input data is appropriately formatted, transformed, and prepared to facilitate optimal learning by the Seq2Seq model, regardless of the specific task or dataset at hand. The goal is to create a versatile and robust pre-processing approach that can be easily adapted to various sequence generation tasks, thus reducing the need for task-specific data pre-processing strategies.
+
+
+Fixed length of input encoder and decoder is needed for Attention Mechanism to calculate the Attention Weight. The Attention Mechanism will consider the sequence output based on every sequence index before to understand the context. Therefore, the output predicted was based on the embedding size of the input in form of dot product. However, if the input doesn't recognize by the model, the Attention Mechanism may not be able to handle this problem, and will only produce an error in the prediction.
+
 
 Here are some generalization methods and principles for pre-processing in Seq2Seq models:
 
