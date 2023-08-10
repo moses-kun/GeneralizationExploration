@@ -129,27 +129,27 @@ Therefore, to achieve generalization model has to be able to adapt with n-length
 
 Generalization in the context of Seq2Seq models refers to the ability to apply a set of data preparation techniques that can be universally effective across different tasks, domains, and datasets. A generalized pipeline ensures that the input data is appropriately formatted, transformed, and prepared to facilitate optimal learning by the Seq2Seq model, regardless of the specific task or dataset at hand. The goal is to create a versatile and robust pre-processing approach that can be easily adapted to various sequence generation tasks, thus reducing the need for task-specific data pre-processing strategies.
 
-Here are some generalization methods and principles for pre-processing in Seq2Seq models:
+% Here are some generalization methods and principles for pre-processing in Seq2Seq models:
 
-    Tokenization and Vocabulary Construction: A generalized pre-processing step involves tokenizing the input sequences into meaningful units, such as words, subwords, or characters. The vocabulary construction should be based on a diverse and representative corpus to handle a wide range of words and phrases in different languages or domains.
+%     Tokenization and Vocabulary Construction: A generalized pre-processing step involves tokenizing the input sequences into meaningful units, such as words, subwords, or characters. The vocabulary construction should be based on a diverse and representative corpus to handle a wide range of words and phrases in different languages or domains.
 
-    Padding and Truncation: Sequences in the input data may vary in length, and Seq2Seq models require fixed-length input. A generalized approach should handle variable-length sequences by either padding shorter sequences or truncating longer ones, ensuring uniformity in sequence length.
+%     Padding and Truncation: Sequences in the input data may vary in length, and Seq2Seq models require fixed-length input. A generalized approach should handle variable-length sequences by either padding shorter sequences or truncating longer ones, ensuring uniformity in sequence length.
 
-    Data Cleaning and Normalization: Pre-processing should include data cleaning to remove irrelevant or noisy elements and normalization to standardize the data, such as converting text to lowercase, removing special characters, or normalizing numerical values.
+%     Data Cleaning and Normalization: Pre-processing should include data cleaning to remove irrelevant or noisy elements and normalization to standardize the data, such as converting text to lowercase, removing special characters, or normalizing numerical values.
 
-    Handling Out-of-Vocabulary (OOV) Tokens: A robust pre-processing pipeline should handle OOV tokens encountered during inference, especially when dealing with unseen words or phrases. This could involve using subword tokenization or handling unknown tokens with special markers.
+%     Handling Out-of-Vocabulary (OOV) Tokens: A robust pre-processing pipeline should handle OOV tokens encountered during inference, especially when dealing with unseen words or phrases. This could involve using subword tokenization or handling unknown tokens with special markers.
 
-    Embedding and Feature Representation: Generalized pre-processing should facilitate the creation of word embeddings or other feature representations that capture semantic meaning and relationships between words effectively. This ensures that the model can extract meaningful information from the input sequences.
+%     Embedding and Feature Representation: Generalized pre-processing should facilitate the creation of word embeddings or other feature representations that capture semantic meaning and relationships between words effectively. This ensures that the model can extract meaningful information from the input sequences.
 
-    Data Augmentation: Data augmentation, as part of pre-processing, can enhance generalization by artificially increasing the diversity of the training data. Techniques such as paraphrasing, back-translation, or adding noise to the input sequences can be applied in a generic manner.
+%     Data Augmentation: Data augmentation, as part of pre-processing, can enhance generalization by artificially increasing the diversity of the training data. Techniques such as paraphrasing, back-translation, or adding noise to the input sequences can be applied in a generic manner.
 
-    Handling Imbalanced Data: If the dataset exhibits class imbalances, a generalized pre-processing approach should include methods to address this issue, such as oversampling, undersampling, or class-weighted loss functions.
+%     Handling Imbalanced Data: If the dataset exhibits class imbalances, a generalized pre-processing approach should include methods to address this issue, such as oversampling, undersampling, or class-weighted loss functions.
 
-    Special Handling for Sequential Data: In some cases, sequential data may require additional pre-processing, such as time series alignment or handling temporal gaps.
+%     Special Handling for Sequential Data: In some cases, sequential data may require additional pre-processing, such as time series alignment or handling temporal gaps.
 
-    Language and Domain Adaptation: To ensure generalization across different languages or domains, pre-processing techniques should be designed to adapt to linguistic variations and domain-specific characteristics.
+%     Language and Domain Adaptation: To ensure generalization across different languages or domains, pre-processing techniques should be designed to adapt to linguistic variations and domain-specific characteristics.
 
-    Data Format Compatibility: A generalized pre-processing pipeline should handle various data formats commonly encountered in sequence generation tasks, such as text data, time series data, or audio data.
+%     Data Format Compatibility: A generalized pre-processing pipeline should handle various data formats commonly encountered in sequence generation tasks, such as text data, time series data, or audio data.
 
 By incorporating these generalization methods into the pre-processing pipeline, Seq2Seq models can be more versatile and capable of handling diverse data sources, tasks, and domains. This helps reduce the effort required for task-specific data preparation and promotes the transferability of Seq2Seq models across different applications.
 
@@ -171,6 +171,8 @@ To address fixed length issue general Seq2Seq can be modified to accept more the
 % minta tolong ini dijelasin metode tokenisasi yang kita pakai. dan proses preprosesing relevan lainnya
 
 % jangan kebanyakan di model
+
+\subsection{hop3}
 
 \subsection{Experiment Setup}
 
@@ -199,24 +201,19 @@ dataset explanation.
 
 %%EL PLAN: pertama kita hasil dari penempatan. berarti placement.json analysis 
 
-% kita bahas mengenai karakteristik dari penempatan yang dibahas: kek dimana mereka ditempatkan, bagaimana semakin panjang dll. 
+kita bahas mengenai karakteristik dari penempatan yang dibahas: kek dimana mereka ditempatkan, bagaimana semakin panjang dll. 
 
-% apa perbedaaan dari hasilnya 
+apa perbedaaan dari hasilnya 
 
 
-% To determine the how seq2seq are able to capture the rule of placement of hop3 algorithm. We have to describe the rule that are present on hop3.
+To determine the how seq2seq are able to capture the rule of placement of hop3 algorithm. We have to describe the rule that are present on hop3.
 
-% 1. first module are placed on fog node connected / 1 hop away from source id
-% 2. next module are place 1 hop away. 
-% 3. if not found next module are search 
+1. first module are placed on fog node connected / 1 hop away from source id
+2. next module are place 1 hop away. 
+3. if not found next module are search 
+4. if cloud is used subsequent placement uses cloud
 
-Results on table (insert table) shows that our proposed method are able to place application comparable to its dataset method of hop3. Table shows that comparatively proposed method are able to provide better performance on response time, number of hop, number of byte and availbility. 
 
-There are application that failed to be placed. This is because of <PAD> token generated by the model. This lowers the count of available application. 
-
-Selection shows a better performing due to the more application are placed in the fog. 
-
-(insert placement file comparison)
 
 
 
@@ -244,10 +241,16 @@ On the other hand, the 'multihead50000-16' and 'multihead50000-8' methods showed
 
 \subsection*{RQ2. How does unseen request and additional number of modules affect performance?}
 
-%table performance 
-% table performance against number of module 
+Results on table (insert table) shows that our proposed method are able to place application comparable to its dataset method of hop3. Table shows that comparatively proposed method are able to provide better performance on response time, number of hop, number of byte and availbility. 
 
+There are application that failed to be placed. This is because of <PAD> token generated by the model. This lowers the count of available application. 
+
+Selection shows a better performing due to the more application are placed in the fog. 
+
+(insert placement file comparison)
 Evaluation done both seq2seq models and hop3 algorithm can be seen on box chart on figure \ref{fig:Avgresponsetimebox}. Comparatively we can see difference between performance of seq2seq and its baseline algorithm. This graph shows a decrease of 50 time units on based on average response time. Furthermore, the outlier on hop3 shows a more inconsistent application response time. 
+
+
 
 \begin{figure}[!h]
 	\centering

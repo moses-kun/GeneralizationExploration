@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex conference_101719"] 1691679518 "conference_101719.aux" "conference_101719.bbl" "conference_101719" 1691679522 0
+["bibtex conference_101719"] 1691680247 "conference_101719.aux" "conference_101719.bbl" "conference_101719" 1691680250 0
   "./050723.bib" 1690026565 1220049 2d3c9bb2df6638d498d52533e7d05546 ""
   "C:/Users/komputer/AppData/Local/Programs/MiKTeX/bibtex/bst/ieeetran/IEEEtran.bst" 1440622569 57748 7c8250ecf02814ce6ddc0cdbb63df1dd ""
-  "conference_101719.aux" 1691679522 3440 47a3348c0f7c2fbfa86618f6fc23af18 "pdflatex"
+  "conference_101719.aux" 1691680250 3547 d900dae05564afeb5d0fa1a38c8e0086 "pdflatex"
   (generated)
   "conference_101719.bbl"
   "conference_101719.blg"
   (rewritten before read)
-["pdflatex"] 1691679519 "c:/Users/komputer/OneDrive - UGM 365/Dokumen/GitHub/GeneralizationExploration/conference_101719.tex" "conference_101719.pdf" "conference_101719" 1691679522 0
+["pdflatex"] 1691680247 "c:/Users/komputer/OneDrive - UGM 365/Dokumen/GitHub/GeneralizationExploration/conference_101719.tex" "conference_101719.pdf" "conference_101719" 1691680250 0
   "C:/Users/komputer/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1690213004 82672 6390f0727fb6e7f787f3243ddd9d5794 ""
   "C:/Users/komputer/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1677101161 10789426 0f66194c3eed0051423b768b5e1c2070 ""
   "C:/Users/komputer/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -88,10 +88,10 @@
   "C:/Users/komputer/AppData/Local/Programs/MiKTeX/tex/latex/psnfss/ot1ptm.fd" 1585253778 1007 15056f4a61917ceed3a44e4ac11fcc52 ""
   "C:/Users/komputer/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1656236890 56148 51a9a8571c07b9921892ae11063ae853 ""
   "IEEEtran.cls" 1440654524 288304 5b2e4fa15b0f7eabb840ebf67df4c0f7 ""
-  "c:/Users/komputer/OneDrive - UGM 365/Dokumen/GitHub/GeneralizationExploration/conference_101719.tex" 1691679494 37571 dc9ba00c90a91d715021216ec62be3a2 ""
-  "conference_101719.aux" 1691679522 3440 47a3348c0f7c2fbfa86618f6fc23af18 "pdflatex"
-  "conference_101719.bbl" 1691679519 1324 9545e8e81a8381793442f1e05f5683b3 "bibtex conference_101719"
-  "conference_101719.tex" 1691679494 37571 dc9ba00c90a91d715021216ec62be3a2 ""
+  "c:/Users/komputer/OneDrive - UGM 365/Dokumen/GitHub/GeneralizationExploration/conference_101719.tex" 1691680243 37591 cc068d865728f4f8657af863c1d5c8cb ""
+  "conference_101719.aux" 1691680250 3547 d900dae05564afeb5d0fa1a38c8e0086 "pdflatex"
+  "conference_101719.bbl" 1691680247 1324 9545e8e81a8381793442f1e05f5683b3 "bibtex conference_101719"
+  "conference_101719.tex" 1691680243 37591 cc068d865728f4f8657af863c1d5c8cb ""
   "fig/hopxnumberofmodule.png" 1691651751 381611 2771c6a5d29e31e5b7a281848df402ac ""
   "fig/numberofmodulexresponsetime.png" 1691649587 385363 95748cca2efe32ca69dc5861522da0a8 ""
   "fig/test.png" 1691648256 212154 d9dc7f2eebb59ba63bc49dad02786a74 ""

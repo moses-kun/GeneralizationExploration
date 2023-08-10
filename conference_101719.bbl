@@ -7,7 +7,8 @@
 \providecommand{\BIBentrySTDinterwordspacing}{\spaceskip=0pt\relax}
 \providecommand{\BIBentryALTinterwordstretchfactor}{4}
 \providecommand{\BIBentryALTinterwordspacing}{\spaceskip=\fontdimen2\font plus
-\BIBentryALTinterwordstretchfactor\fontdimen3\font minus \fontdimen4\font\relax}
+\BIBentryALTinterwordstretchfactor\fontdimen3\font minus
+  \fontdimen4\font\relax}
 \providecommand{\BIBforeignlanguage}[2]{{%
 \expandafter\ifx\csname l@#1\endcsname\relax
 \typeout{** WARNING: IEEEtran.bst: No hyphenation pattern has been}%
@@ -22,7 +23,11 @@
 
 \bibitem{aazam_offloading_2018}
 \BIBentryALTinterwordspacing
-M.~Aazam, S.~Zeadally, and K.~A. Harras, ``Offloading in fog computing for {IoT}: {Review}, enabling technologies, and research opportunities,'' \emph{Future Generation Computer Systems}, vol.~87, pp. 278--289, 2018, publisher: Elsevier B.V. [Online]. Available: \url{https://doi.org/10.1016/j.future.2018.04.057}
+M.~Aazam, S.~Zeadally, and K.~A. Harras, ``Offloading in fog computing for
+  {IoT}: {Review}, enabling technologies, and research opportunities,''
+  \emph{Future Generation Computer Systems}, vol.~87, pp. 278--289, 2018,
+  publisher: Elsevier B.V. [Online]. Available:
+  \url{https://doi.org/10.1016/j.future.2018.04.057}
 \BIBentrySTDinterwordspacing
 
 \end{thebibliography}
